@@ -28,6 +28,7 @@ public:
 //O(n) 2pointer approach
 class Solution {
 public:
+
     int maxArea(vector<int>& ht) {
         int curWater , maxWater = 0;
         int left = 0, right = ht.size() - 1;
