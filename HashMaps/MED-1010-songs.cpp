@@ -7,6 +7,24 @@ using namespace std;
 
 
 
+//Best approach , shortest less complex O(n) approach
+class Solution {
+public:
+    int numPairsDivisibleBy60(vector<int>& time) {
+        vector<int> mods(60);
+        int ans = 0 ;
+        int n = time.size();
+        for(int i = 0 ; i < n ; i++){
+           mods[time[i] % 60]++;
+        }
+        for(int i = 1 ; i < 30; i++){
+           if(mods[i]!=0) ans += mods[60 - i] * mods[i];
+        }
+        ans+= (1LL * (mods[0])*(mods[0] - 1))/2;
+        ans+= (1LL * (mods[30])*(mods[30] - 1))/2;
+        return ans;
+    }
+};
 
 
 // optimal approach with O(n) approach using hashmap
