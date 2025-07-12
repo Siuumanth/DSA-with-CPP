@@ -24,6 +24,19 @@ vec.begin();
 // makes first element 0
 vec.erase(vec.begin()); 
 
+// Remove all occurences of a value
+vector<int> v = {1, 2, 3, 2, 4};
+v.erase(remove(v.begin(), v.end(), 2), v.end());  // removes all 2s
+
+
+vector<int> v = {10, 20, 30};
+v.erase(v.begin() + 1);  // removes element at index 1 (i.e., 20)
+
+vector<int> v = {5, 6, 7, 8, 9};
+v.erase(v.begin() + 1, v.begin() + 4);  // removes 6, 7, 8
+
+
+
 ```
 
 ##### Iterators:
@@ -48,6 +61,85 @@ for(auto itr = vec.rbegin(); itr!=vec.rend(); itr++){
 ```
 
 ---
+
+## 2. String
+```cpp
+ string s = "hello world";
+
+// LENGTH
+s.length()  // 11
+
+// ACCESS CHARACTER
+cout << "First char: " << s[0] << endl;     // h
+cout << "Last char: " << s.back() << endl;  // d
+
+// FRONT / BACK
+cout << "Front: " << s.front() << ", Back: " << s.back() << endl;
+
+// APPEND / PUSH_BACK
+s.append("!!");
+cout << "After append: " << s << endl;  // hello world!!
+s.push_back('?');
+cout << "After push_back: " << s << endl;  // hello world!!?
+
+
+// POP_BACK
+s.pop_back();
+cout << "After pop_back: " << s << endl;  // hello world!!
+
+// INSERT
+s.insert(5, "123");
+cout << "After insert: " << s << endl;  // hello123 world!!
+
+
+// ERASE
+s.erase(5, 3);  // erase 3 chars from index 5
+cout << "After erase: " << s << endl;  // hello world!!
+
+
+// SUBSTRING
+string sub = s.substr(6, 5);  // start=6, len=5
+cout << "Substring: " << sub << endl;  // world
+
+
+// FIND
+size_t pos = s.find("world");
+cout << "Position of 'world': " << pos << endl;  // 6
+
+
+// RFind (last occurrence)
+size_t rpos = s.rfind("l");
+cout << "Last 'l': " << rpos << endl;  // 9
+
+
+// REPLACE
+s.replace(6, 5, "there");
+cout << "After replace: " << s << endl;  // hello there!!
+
+
+// COMPARE
+string a = "abc", b = "xyz";
+if (a.compare(b) < 0)
+    cout << "a < b" << endl;
+
+// CLEAR
+s.clear();
+cout << "After clear: '" << s << "' with length " << s.length() << endl;
+
+
+// EMPTY
+if (s.empty()) cout << "String is empty\n";
+
+// STRING TO INT
+string num = "123";
+int n = stoi(num);  // string to int
+
+cout << "stoi: " << n + 1 << endl;  // 124
+
+// INT TO STRING
+int x = 456;
+string x_str = to_string(x);
+```
 
 ## 2.List:
 Internally implemented as a **Doubly Linked List.**
@@ -151,6 +243,7 @@ q.empty();
 ## 7. Priority Queue
 Uses a max heap structure internally
 
+#### Max heap:
 ```cpp
 
 priority_queue<int> q;
@@ -163,6 +256,24 @@ q.pop()  // returns void
 q.top()
 
 size,empty
+
+
+```
+
+#### Min heap:
+
+```cpp
+
+priority_queue<int, vector<int>, greater<int>> minQ;
+
+minQ.push(10);
+minQ.push(5);
+minQ.push(20);
+
+int top = minQ.top();  // returns 5
+
+minQ.pop();            // removes 5
+
 ```
 
 ---

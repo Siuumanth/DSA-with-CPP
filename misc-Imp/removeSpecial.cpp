@@ -15,14 +15,12 @@ int main(){
 
     for(int i = 0; i<n;){ 
         c=0, valid = 0;
-
         if(set.find(s[i]) != set.end()) {
             c++;
         }
         else{
             ans += s[i];   // valid character
         }
-
         i++;
         while(valid != c && i<n){
             if(set.find(s[i]) != set.end()){
@@ -38,13 +36,9 @@ int main(){
             }
             i++;
         }
-
     }
 
     cout<< ans;
 
-
     return 0;
 }
-
-// git commit -m " Did 496 1199 and smarthire string problem in miscImp"

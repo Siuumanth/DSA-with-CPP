@@ -1,0 +1,65 @@
+/*
+---
+
+🔳 **Problem Statement (Reconstructed from Image)**
+
+You are given a **2D grid** consisting of characters. Each cell can be one of the following:
+
+* `'s'` – represents the **starting point** (snake).
+* `'m'` – represents the **man** (destination).
+* `'w'` – represents a **wall** (blocked cell).
+* `'p'` – represents a **valid path**.
+
+You can move in **four directions**: up, down, left, right (no diagonals).
+
+#### ❗ Task:
+
+Determine whether the snake can **reach the man** by moving only through `'p'` or `'m'` cells (cannot move through `'w'`). The snake can only move to adjacent (4-directional) cells.
+
+#### ✅ Constraints:
+
+* The grid is of size `n x m` (dimensions not specified).
+* There is exactly one `'s'` and one `'m'` in the grid.
+* Assume the input is valid.
+
+#### 🧾 Input Format (assumed):
+
+```
+First line: two integers `n` and `m` – number of rows and columns.
+Next `n` lines: each line contains `m` characters (from {s, m, p, w}) without spaces.
+```
+
+#### 🧾 Output Format:
+
+* Print `"YES"` if a valid path exists from `'s'` to `'m'`.
+* Print `"NO"` otherwise.
+
+---
+
+### 🔁 Example:
+
+**Input:**
+
+```
+4 4
+sppw
+wpwp
+pppw
+wwpm
+```
+
+**Output:**
+
+```
+YES
+```
+
+---
+
+Let me know if you want me to generate:
+
+* A sample test case to debug.
+* A blank version for practice.
+* Or validate your own code against this.
+
+*/
