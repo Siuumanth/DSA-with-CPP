@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LinkedList.md",
+                "file": "STL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LinkedList"
+              "title": "STL"
             }
           }
         ],
@@ -183,10 +183,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0299605a831ecf3f",
+  "active": "49ad0623cf947506",
   "lastOpenFiles": [
+    "LinkedList.md",
     "LinkedList.exe",
-    "STL.md",
-    "LinkedList.md"
+    "STL.md"
   ]
 }
