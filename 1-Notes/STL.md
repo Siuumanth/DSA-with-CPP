@@ -233,7 +233,7 @@ q.push(1);
 q.pop();
 q.size();
 
-q.front() // returns firsy element
+q.front() // returns first element
 
 q.empty();
 ```
